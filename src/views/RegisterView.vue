@@ -104,6 +104,7 @@ a {
 
 .button {
   display: inline-grid;
+  font-size: var(--fs-md);
   color: var(--clr-clean-50);
   background-color: var(--clr-charcoal-950);
   border: thin solid var(--clr-charcoal-950);
