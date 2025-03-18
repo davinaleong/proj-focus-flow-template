@@ -1,0 +1,120 @@
+@import './base.css';
+
+/* Define custom fonts */
+@font-face {
+  font-family: 'Monsterrat';
+  src: url(./fonts/Montserrat/Montserrat-VariableFont_wght.ttf) format(truetype);
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  src: url(./fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf) format(truetype);
+}
+
+/* Global CSS Variables */
+:root {
+  /* Primary colors */
+  --clr-black: #000;
+  --clr-white: #fff;
+
+  /* Shades of blue */
+  --clr-blue-50: #e9f0f6;
+  --clr-blue-100: #d3e0ed;
+  --clr-blue-200: #a7c1db;
+  --clr-blue-300: #7ca2c8;
+  --clr-blue-400: #5083b6;
+  --clr-blue-500: #2464a4;
+  --clr-blue-600: #1d5083;
+  --clr-blue-700: #163c62;
+  --clr-blue-800: #0e2842;
+  --clr-blue-900: #071421;
+  --clr-blue-950: #040a10;
+
+  /* Shades of orange */
+  --clr-orange-50: #fef6e9;
+  --clr-orange-100: #fdedd3;
+  --clr-orange-200: #fbdba7;
+  --clr-orange-300: #f9ca7b;
+  --clr-orange-400: #f7b84f;
+  --clr-orange-500: #f5a623;
+  --clr-orange-600: #c4851c;
+  --clr-orange-700: #936415;
+  --clr-orange-800: #62420e;
+  --clr-orange-900: #312107;
+  --clr-orange-950: #181103;
+
+  /* Neutral "clean" color palette */
+  --clr-clean-50: #fefeff;
+  --clr-clean-100: #fdfefe;
+  --clr-clean-200: #fcfcfd;
+  --clr-clean-300: #fafbfc;
+  --clr-clean-400: #f9f9fb;
+  --clr-clean-500: #f7f8fa;
+  --clr-clean-600: #c6c6c8;
+  --clr-clean-700: #949596;
+  --clr-clean-800: #636364;
+  --clr-clean-900: #313232;
+  --clr-clean-950: #191919;
+
+  /* Charcoal grayscale palette */
+  --clr-charcoal-50: #ebebeb;
+  --clr-charcoal-100: #d6d6d6;
+  --clr-charcoal-200: #adadad;
+  --clr-charcoal-300: #858585;
+  --clr-charcoal-400: #5c5c5c;
+  --clr-charcoal-500: #333333;
+  --clr-charcoal-600: #292929;
+  --clr-charcoal-700: #1f1f1f;
+  --clr-charcoal-800: #141414;
+  --clr-charcoal-900: #0a0a0a;
+  --clr-charcoal-950: #050505;
+
+  /* Font families */
+  --ff-default:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Helvetica Neue', Arial, sans-serif;
+  --ff-montserrat: 'Montserrat', Arial, sans-serif;
+
+  /* Font weights */
+  --fw-thin: 100;
+  --fw-light: 200;
+  --fw-extralight: 300;
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+  --fw-black: 900;
+
+  /* Responsive font sizes using clamp */
+  --fs-xs: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+  --fs-sm: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+  --fs-md: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  --fs-lg: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+  --fs-xl: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+  --fs-2xl: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
+  --fs-3xl: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
+  --fs-4xl: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
+
+  /* Spacing variables using clamp */
+  --space-3xs: clamp(0.3125rem, 0.3125rem + 0vw, 0.3125rem);
+  --space-2xs: clamp(0.5625rem, 0.5408rem + 0.1087vw, 0.625rem);
+  --space-xs: clamp(0.875rem, 0.8533rem + 0.1087vw, 0.9375rem);
+  --space-s: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  --space-m: clamp(1.6875rem, 1.6223rem + 0.3261vw, 1.875rem);
+  --space-l: clamp(2.25rem, 2.163rem + 0.4348vw, 2.5rem);
+  --space-xl: clamp(3.375rem, 3.2446rem + 0.6522vw, 3.75rem);
+  --space-2xl: clamp(4.5rem, 4.3261rem + 0.8696vw, 5rem);
+  --space-3xl: clamp(6.75rem, 6.4891rem + 1.3043vw, 7.5rem);
+
+  /* Box shadows */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15), 0 8px 10px rgba(0, 0, 0, 0.07);
+  --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.2);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-outline: 0 0 0 3px rgba(66, 153, 225, 0.5); /* Used for focus states */
+}
