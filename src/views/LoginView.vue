@@ -17,7 +17,7 @@
               type="email"
               name="email"
               class="auth__main__form__field"
-              placeholder="johndoe@example.com"
+              placeholder="email"
               required
             />
             along with my
@@ -25,7 +25,7 @@
               type="password"
               name="password"
               class="auth__main__form__field"
-              placeholder="********"
+              placeholder="password"
               required
             />
             and click

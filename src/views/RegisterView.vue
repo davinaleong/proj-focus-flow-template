@@ -17,7 +17,7 @@
               type="text"
               name="name"
               class="auth__main__form__field"
-              placeholder="John Doe's"
+              placeholder="whose"
               required
             />
             project tracker.
@@ -29,22 +29,22 @@
               type="password"
               name="password"
               class="auth__main__form__field"
-              placeholder="********"
+              placeholder="something strong"
               required
             />
-            and confirm that it has been entered correctly again
+            and confirm that it has been entered correctly again as
             <input
               type="password"
               name="password_confirmation"
               class="auth__main__form__field"
-              placeholder="********"
+              placeholder="something strong"
               required
             />. My registered email is
             <input
               type="email"
               name="email"
               class="auth__main__form__field"
-              placeholder="janedoe@example.com"
+              placeholder="johndoe@example.com"
               required
             />.
           </p>
