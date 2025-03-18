@@ -2,7 +2,9 @@
   <div class="auth">
     <div class="auth__inner | flow">
       <header class="auth__header">
-        <h1 class="auth__header__h1">Create an Account with <strong>Focus Flow</strong></h1>
+        <h1 class="auth__header__h1">
+          Create an Account with <a href="#" class="auth__header__h1__a">Focus Flow</a>
+        </h1>
       </header>
 
       <main class="auth__main">
@@ -49,9 +51,7 @@
 
           <p>I anticipate receiving a verification email at <em>janedoe@example.com</em>.</p>
 
-          <p>
-            If I already have an existing account, I should proceed to <a href="/login">log in</a>.
-          </p>
+          <p>If I already have an existing account, I should proceed to <a href="#">log in</a>.</p>
 
           <p>
             <button type="submit" class="button button-primary form__button">Thank you.</button>
@@ -84,7 +84,7 @@
   font-weight: var(--fw-medium);
 }
 
-strong {
+.auth__header__h1__a {
   font-weight: var(--fw-bold);
 }
 
