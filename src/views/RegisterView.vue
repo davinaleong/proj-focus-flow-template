@@ -109,7 +109,7 @@ a {
   background-color: var(--clr-charcoal-950);
   border: thin solid var(--clr-charcoal-950);
   border-radius: none;
-  padding: var(--space-3xs);
+  padding: var(--space-3xs) var(--space-2xs);
 }
 
 .auth__footer__p {
