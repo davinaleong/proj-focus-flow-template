@@ -1,12 +1,12 @@
 <template>
   <div class="auth">
-    <div class="auth__inner">
+    <div class="auth__inner | flow">
       <header class="auth__header">
         <h1 class="auth__header__h1">Create an Account with <strong>Focus Flow</strong></h1>
       </header>
 
       <main class="auth__main">
-        <form method="post" class="auth__main__form">
+        <form method="post" class="auth__main__form | flow">
           <input type="text" name="first_name" style="display: none" />
 
           <p>
@@ -76,6 +76,7 @@
 .auth__inner {
   max-width: 60ch;
   padding: var(--space-m);
+  border: thin solid var(--clr-charcoal-950);
 }
 
 .auth__header__h1 {
@@ -88,6 +89,53 @@ strong {
 }
 
 a {
-  color: var(--clr-blue-500);
+  color: var(--clr-blue-700);
+}
+
+.auth__main__form__field {
+  font-size: var(--fs-md);
+  color: var(--clr-charcoal-950);
+  background-color: transparent;
+  border-block-start: none;
+  border-block-end: thin solid var(--clr-charcoal-950);
+  border-inline-start: none;
+  border-inline-end: none;
+}
+
+.button {
+  display: inline-grid;
+  color: var(--clr-clean-50);
+  background-color: var(--clr-charcoal-950);
+  border: thin solid var(--clr-charcoal-950);
+  border-radius: none;
+  padding: var(--space-3xs);
+}
+
+.auth__footer__p {
+  font-size: var(--fs-sm);
+  font-style: italic;
+  opacity: 0.7;
+}
+
+@media (prefers-color-scheme: dark) {
+  a {
+    color: var(--clr-blue-300);
+  }
+
+  .auth__inner {
+    border: thin solid var(--clr-clean-50);
+  }
+
+  .auth__main__form__field {
+    color: var(--clr-clean-50);
+    border-block-end: thin solid var(--clr-clean-50);
+  }
+
+  .button {
+    color: var(--clr-charcoal-950);
+    background-color: var(--clr-clean-50);
+    border: thin solid var(--clr-clean-50);
+    border-radius: none;
+  }
 }
 </style>
