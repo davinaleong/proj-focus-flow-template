@@ -2,36 +2,16 @@
   <div class="auth">
     <div class="auth__inner | flow">
       <header class="auth__header">
-        <h1 class="auth__header__h1">Log into <strong>Focus Flow</strong></h1>
+        <h1 class="auth__header__h1">Verify Your Email from <strong>Focus Flow</strong></h1>
       </header>
 
-      <main class="auth__main">
-        <form method="post" class="auth__main__form | flow">
-          <input type="text" name="first_name" style="display: none" />
-          <p>
-            Welcome back! For security purposes, access to my data is protected by a digital lock.
-            To proceed, I must enter my registered
-            <input
-              type="email"
-              name="email"
-              class="auth__main__form__field"
-              placeholder="email"
-              required
-            />
-            along with my
-            <input
-              type="password"
-              name="password"
-              class="auth__main__form__field"
-              placeholder="password"
-              required
-            />
-            and click
-            <button type="submit" class="button button-primary form__button">here</button>.
-          </p>
-          <p>If I have forgotten my password, I can reset it <a href="#">here</a>.</p>
-          <p>If I do not have an account, I can sign up <a href="#">here</a>.</p>
-        </form>
+      <main class="auth__main | flow">
+        <p>
+          After creating an account, I need to check my email at <strong>jo****cm</strong>. I should
+          look for an email titled
+          <strong>"Focus Flow: Thank You for Verifying Your Email"</strong> sent from
+          <strong>noreply@focusflow.com</strong> to complete the verification process.
+        </p>
       </main>
       <footer class="auth__footer">
         <p class="auth__footer__p">Focus Flow &copy; Davina Leong 2025</p>
@@ -59,11 +39,11 @@
   font-weight: var(--fw-medium);
 }
 
-.auth__header__h1__a {
-  font-weight: var(--fw-bold);
+strong {
+  color: var(--clr-blue-700);
 }
 
-strong {
+em {
   color: var(--clr-blue-700);
 }
 
@@ -99,6 +79,10 @@ a {
 
 @media (prefers-color-scheme: dark) {
   strong {
+    color: var(--clr-blue-300);
+  }
+
+  em {
     color: var(--clr-blue-300);
   }
 

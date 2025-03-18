@@ -3,7 +3,7 @@ import TempView from '../views/TempView.vue'
 import LoginView from '../views/LoginView.vue'
 import RegisterView from '../views/RegisterView.vue'
 import ForgotPasswordView from '../views/ForgotPasswordView.vue'
-import EmailVerifiedView from '../views/EmailVerifiedView.vue'
+import VerifyEmailView from '../views/VerifyEmailView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -29,9 +29,9 @@ const router = createRouter({
       component: ForgotPasswordView,
     },
     {
-      path: '/email-verified',
-      name: 'email-verified',
-      component: EmailVerifiedView,
+      path: '/verify-email',
+      name: 'verify-email',
+      component: VerifyEmailView,
     },
   ],
 })

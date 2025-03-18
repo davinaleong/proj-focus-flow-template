@@ -1,1 +1,0 @@
-<template>Email Verified</template>

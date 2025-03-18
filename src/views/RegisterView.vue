@@ -2,9 +2,7 @@
   <div class="auth">
     <div class="auth__inner | flow">
       <header class="auth__header">
-        <h1 class="auth__header__h1">
-          Create an Account with <a href="#" class="auth__header__h1__a">Focus Flow</a>
-        </h1>
+        <h1 class="auth__header__h1">Create an Account with <strong>Focus Flow</strong></h1>
       </header>
 
       <main class="auth__main">
@@ -88,6 +86,10 @@
   font-weight: var(--fw-bold);
 }
 
+strong {
+  color: var(--clr-blue-700);
+}
+
 a {
   color: var(--clr-blue-700);
 }
@@ -119,6 +121,10 @@ a {
 }
 
 @media (prefers-color-scheme: dark) {
+  strong {
+    color: var(--clr-blue-300);
+  }
+
   a {
     color: var(--clr-blue-300);
   }

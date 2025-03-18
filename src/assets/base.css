@@ -6,17 +6,25 @@ body {
   line-height: 1.5;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    color: var(--clr-clean-50);
-    background-color: var(--clr-charcoal-950);
-  }
-}
-
 :focus {
   box-shadow: var(--shadow-outline);
 }
 
 .flow > * + * {
   margin-block-start: var(--space-m);
+}
+
+strong {
+  font-weight: var(--fw-bold);
+}
+
+em {
+  font-style: italic;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: var(--clr-clean-50);
+    background-color: var(--clr-charcoal-950);
+  }
 }
