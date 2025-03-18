@@ -6,6 +6,8 @@ import { RouterLink } from 'vue-router'
   <nav>
     <RouterLink to="/register">Register</RouterLink>
     <RouterLink to="/login">Login</RouterLink>
+    <RouterLink to="/email-verified">Email Verified</RouterLink>
+    <RouterLink to="/forgot-password">Forgot Password</RouterLink>
   </nav>
 </template>
 
