@@ -4,6 +4,7 @@ import LoginView from '../views/LoginView.vue'
 import RegisterView from '../views/RegisterView.vue'
 import ForgotPasswordView from '../views/ForgotPasswordView.vue'
 import VerifyEmailView from '../views/VerifyEmailView.vue'
+import TwoFactorAuthView from '../views/TwoFactorAuthView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +33,11 @@ const router = createRouter({
       path: '/verify-email',
       name: 'verify-email',
       component: VerifyEmailView,
+    },
+    {
+      path: '/two-factor-auth',
+      name: 'two-factor-auth',
+      component: TwoFactorAuthView,
     },
   ],
 })

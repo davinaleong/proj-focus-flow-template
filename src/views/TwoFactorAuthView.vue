@@ -1,74 +1,40 @@
-<script setup lang="ts">
-import { ref } from 'vue'
-
-const email = ref<string>('')
-
-const updateEmail = (event: Event) => {
-  email.value = (event.target as HTMLInputElement).value
-}
-</script>
-
 <template>
   <div class="auth">
     <div class="auth__inner | flow">
       <header class="auth__header">
-        <h1 class="auth__header__h1">Create an Account with <strong>Focus Flow</strong></h1>
+        <h1 class="auth__header__h1">Activate 2FA for Your <strong>Focus Flow</strong> Account</h1>
       </header>
 
-      <main class="auth__main">
+      <main class="auth__main | flow">
         <form method="post" class="auth__main__form | flow">
           <input type="text" name="first_name" style="display: none" />
 
           <p>
-            This is
+            For security purposes, please enter the verification code sent to your email at
+            jo****om. The email is titled
+            <strong>"Focus Flow: Here is Your Security Code"</strong> and comes from
+            <strong>noreply@focusflow.com</strong>.
+          </p>
+
+          <p>
+            Enter Code:
             <input
-              type="text"
-              name="name"
+              type="number"
+              name="code"
               class="auth__main__form__field"
-              placeholder="whose"
+              placeholder="000000"
+              maxlength="6"
               required
             />
-            project tracker.
           </p>
 
           <p>
-            I would like to set my password as
-            <input
-              type="password"
-              name="password"
-              class="auth__main__form__field"
-              placeholder="something strong"
-              required
-            />
-            and confirm that it has been entered correctly again as
-            <input
-              type="password"
-              name="password_confirmation"
-              class="auth__main__form__field"
-              placeholder="something strong"
-              required
-            />. My registered email is
-            <input
-              type="email"
-              name="email"
-              class="auth__main__form__field"
-              placeholder="johndoe@example.com"
-              :value="email"
-              @input="updateEmail"
-              required
-            />.
+            If you have not received the code, you may
+            <button type="submit" class="button button-primary form__button">request</button> a new
+            one after 60 minutes.
           </p>
 
-          <p>
-            I anticipate receiving a verification email at: <strong>{{ email }}</strong
-            >.
-          </p>
-
-          <p>If I already have an existing account, I should proceed to <a href="#">log in</a>.</p>
-
-          <p>
-            <button type="submit" class="button button-primary form__button">Thank you.</button>
-          </p>
+          <p><button type="submit" class="button button-primary form__button">Thank You</button></p>
         </form>
       </main>
       <footer class="auth__footer">
@@ -97,11 +63,11 @@ const updateEmail = (event: Event) => {
   font-weight: var(--fw-medium);
 }
 
-.auth__header__h1__a {
-  font-weight: var(--fw-bold);
+strong {
+  color: var(--clr-blue-700);
 }
 
-strong {
+em {
   color: var(--clr-blue-700);
 }
 
@@ -137,6 +103,10 @@ a {
 
 @media (prefers-color-scheme: dark) {
   strong {
+    color: var(--clr-blue-300);
+  }
+
+  em {
     color: var(--clr-blue-300);
   }
 

@@ -8,6 +8,7 @@ import { RouterLink } from 'vue-router'
     <RouterLink to="/login">Login</RouterLink>
     <RouterLink to="/verify-email">Verify Email</RouterLink>
     <RouterLink to="/forgot-password">Forgot Password</RouterLink>
+    <RouterLink to="/two-factor-auth">Two Factor Authentication</RouterLink>
   </nav>
 </template>
 
