@@ -1,3 +1,13 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const text = ref<string>('')
+
+const updateText = (event: Event) => {
+  text.value = (event.target as HTMLInputElement).value
+}
+</script>
+
 <template>
   <div class="auth">
     <div class="auth__inner | flow">
@@ -16,6 +26,8 @@
               name="name"
               class="auth__main__form__field"
               placeholder="whose"
+              :value="text"
+              @input="updateText"
               required
             />
             project tracker.
@@ -47,7 +59,10 @@
             />.
           </p>
 
-          <p>I anticipate receiving a verification email at <em>janedoe@example.com</em>.</p>
+          <p>
+            I anticipate receiving a verification email at: <strong>{{ text }}</strong
+            >.
+          </p>
 
           <p>If I already have an existing account, I should proceed to <a href="#">log in</a>.</p>
 
