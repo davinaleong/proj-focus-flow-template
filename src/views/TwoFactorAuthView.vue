@@ -1,3 +1,37 @@
+<script lang="ts">
+export default {
+  data() {
+    return {
+      visible: false,
+      countDown: 30,
+    }
+  },
+  methods: {
+    showResendCode() {
+      this.visible = true
+      if (this.countDown <= 0) {
+        this.visible = true
+      }
+    },
+    countDownTimer() {
+      if (this.countDown > 0) {
+        setTimeout(() => {
+          this.countDown -= 1
+          this.countDownTimer()
+        }, 1000)
+      }
+    },
+    resetTimer() {
+      this.countDown = 30
+      this.countDownTimer() // Start the countdown timer after reset
+    },
+  },
+  created() {
+    this.countDownTimer()
+  },
+}
+</script>
+
 <template>
   <div class="auth">
     <div class="auth__inner | flow">
@@ -30,8 +64,10 @@
 
           <p>
             If you have not received the code, you may
-            <button type="submit" class="button button-primary form__button">request</button> a new
-            one after 60 minutes.
+            <button type="button" class="button button-primary form__button" @click="resetTimer">
+              request
+            </button>
+            a new one after<br />{{ countDown }} seconds.
           </p>
 
           <p><button type="submit" class="button button-primary form__button">Thank You</button></p>
